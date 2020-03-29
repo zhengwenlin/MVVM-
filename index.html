@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="name">
+        <div>
+        {{name}}   {{age}}
+        </div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <div v-html="message">
+
+        </div>
+    </div>
+    <script src="./mvvm.js"></script>
+    <script>
+        let vm = new MVVM({
+            el: '#app',
+            data: {
+                name: 'zhengwenlin',
+                age: 18,
+                hobby:{
+                    a: 1,
+                    b: 2,
+                    c: {
+                        f: 100
+                    }
+                },
+                message:`<p>我是p标签</p>`
+            }
+        })
+
+    </script>
+</body>
+</html>
